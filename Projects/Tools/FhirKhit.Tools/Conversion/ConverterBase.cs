@@ -146,6 +146,49 @@ namespace FhirKhit.Tools
             return true;
         }
 
+        public void FilterMessages(params String[] filters)
+        {
+            FilterErrorMessages(filters);
+            FilterWarningMessages(filters);
+            FilterInfoMessages(filters);
+        }
+
+        public void FilterWarningMessages(params String[] filters)
+        {
+            DoFilterMessages(this.warnings, filters);
+        }
+
+        public void FilterErrorMessages(params String[] filters)
+        {
+            DoFilterMessages(this.errors, filters);
+        }
+
+        public void FilterInfoMessages(params String[] filters)
+        {
+            DoFilterMessages(this.info, filters);
+        }
+
+
+        void DoFilterMessages(List<String> msgs, IEnumerable<String> filters)
+        {
+            bool failsFilter(String msg)
+            {
+                foreach (String filter in filters)
+                    if (msg.Contains(filter))
+                        return true;
+                return false;
+            }
+
+            Int32 i = 0;
+            while (i < msgs.Count)
+            {
+                if (failsFilter(msgs[i]))
+                    msgs.RemoveAt(i);
+                else
+                    i += 1;
+            }
+        }
+
         public bool FormatInfoMessages(StringBuilder sb)
         {
             if (sb is null)
