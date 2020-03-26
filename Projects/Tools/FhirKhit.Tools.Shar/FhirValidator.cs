@@ -23,7 +23,9 @@ namespace FhirKhit.Tools.R3
         public bool FailOnWarnings { get; set; } = true;
         public bool CheckIfResourceFlag { get; set; } = false;
 
-        public String validationPath { get; set; }
+        public String ValidatorArgs { get; set; }
+        public String ValidationPath { get; set; }
+
 
         public FhirValidator(String validationPath = null)
         {
@@ -34,7 +36,7 @@ namespace FhirKhit.Tools.R3
                 localDir = Path.GetFullPath(localDir);
                 validationPath = Path.Combine(localDir, "validation.xml");
             }
-            this.validationPath = validationPath;
+            this.ValidationPath = validationPath;
         }
 
         public bool ValidateDir(String baseDir, String fileFilter, String version)
@@ -86,12 +88,12 @@ namespace FhirKhit.Tools.R3
             executingDir = Path.GetFullPath(executingDir);
             String jarPath = Path.Combine(executingDir, "org.hl7.fhir.validator.jar");
             StringBuilder args = new StringBuilder();
-            args.Append($"-jar  \"{jarPath}\" ");
+            args.Append($"-jar  \"{jarPath}\" {this.ValidatorArgs}");
             foreach (String resourcePath in resourcePaths)
                 args.Append($"\"{Path.GetFullPath(resourcePath)}\" ");
-            args.Append($"-output \"{validationPath}\" -version {version}");
+            args.Append($"-output \"{this.ValidationPath}\" -version {version}");
             base.Execute(executingDir, "java", args.ToString());
-            return this.ProcessResults(resourcePaths, validationPath);
+            return this.ProcessResults(resourcePaths, this.ValidationPath);
         }
 
         protected Boolean ProcessResults(String[] resourcePaths, String validationPath)
