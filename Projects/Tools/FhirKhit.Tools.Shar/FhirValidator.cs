@@ -90,8 +90,8 @@ namespace FhirKhit.Tools.R3
             StringBuilder args = new StringBuilder();
             args.Append($"-jar  \"{jarPath}\" {this.ValidatorArgs}");
             foreach (String resourcePath in resourcePaths)
-                args.Append($"\"{Path.GetFullPath(resourcePath)}\" ");
-            args.Append($"-output \"{this.ValidationPath}\" -version {version}");
+                args.Append($" \"{Path.GetFullPath(resourcePath)}\"");
+            args.Append($" -output \"{this.ValidationPath}\" -version {version}");
             base.Execute(executingDir, "java", args.ToString());
             return this.ProcessResults(resourcePaths, this.ValidationPath);
         }
