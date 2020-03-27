@@ -25,6 +25,7 @@ namespace FhirKhit.Tools.R3
 
         public String ValidatorArgs { get; set; }
         public String ValidationPath { get; set; }
+        public String JarPath;
 
 
         public FhirValidator(String validationPath = null)
@@ -86,7 +87,9 @@ namespace FhirKhit.Tools.R3
             String executingDir = Assembly.GetExecutingAssembly().Location;
             executingDir = Path.GetDirectoryName(executingDir);
             executingDir = Path.GetFullPath(executingDir);
-            String jarPath = Path.Combine(executingDir, "org.hl7.fhir.validator.jar");
+            String jarPath = this.JarPath;
+            if (jarPath == null)
+                jarPath = Path.Combine(executingDir, "org.hl7.fhir.validator.jar");
             StringBuilder args = new StringBuilder();
             args.Append($"-jar  \"{jarPath}\" {this.ValidatorArgs}");
             foreach (String resourcePath in resourcePaths)
