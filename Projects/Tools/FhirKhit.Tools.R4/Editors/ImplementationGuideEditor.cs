@@ -36,6 +36,30 @@ namespace FhirKhit.Tools.R4
                 ;
         }
 
+        /// <summary>
+        /// Mark item as an example of the
+        /// profileExample profile.
+        /// </summary>
+        public void AddIGResource(String path,
+            String name,
+            String description,
+            String groupId,
+            String exampleProfile)
+        {
+
+            this.resources
+                .AppendLine($"<resource>")
+                .AppendLine($"  <reference>")
+                .AppendLine($"    <reference value=\"{path}\" />")
+                .AppendLine($"  </reference>")
+                .AppendLine($"  <name value=\"{name}\" />")
+                .AppendLine($"  <description value=\"{description}\" />")
+                .AppendLine($"  <exampleCanonical value=\"{exampleProfile}\" />")
+                .AppendLine($"  <groupingId value=\"{groupId}\" />")
+                .AppendLine($"</resource>")
+                ;
+        }
+
         public void AddIGResource(String path,
             String name,
             String description,
