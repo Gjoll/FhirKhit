@@ -3,6 +3,7 @@ using Hl7.Fhir.Model;
 using Hl7.Fhir.Serialization;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Text;
 
@@ -14,6 +15,8 @@ namespace FhirKhit.Tools.R4
     /// </summary>
     public class ImplementationGuideEditor
     {
+        HashSet<String> groupIds = new HashSet<string>();
+
         CodeEditorXml implementationGuide;
         CodeBlockNested groups;
         CodeBlockNested resources;
@@ -28,6 +31,10 @@ namespace FhirKhit.Tools.R4
 
         public void AddGrouping(String groupId, String name, String description)
         {
+            Debug.Assert(groupId.StartsWith(" ") == false);
+            Debug.Assert(groupId.EndsWith(" ") == false);
+
+            this.groupIds.Add(groupId);
             this.groups
                 .AppendLine($"<grouping id=\"{groupId}\">")
                 .AppendLine($"  <name value=\"{name}\" />")
@@ -46,6 +53,11 @@ namespace FhirKhit.Tools.R4
             String groupId,
             String exampleProfile)
         {
+            Debug.Assert(groupId.StartsWith(" ") == false);
+            Debug.Assert(groupId.EndsWith(" ") == false);
+
+            if (this.groupIds.Contains(groupId) == false)
+                throw new Exception($"Group {groupId} has not been defined");
 
             this.resources
                 .AppendLine($"<resource>")
@@ -66,6 +78,12 @@ namespace FhirKhit.Tools.R4
             String groupId,
             bool example)
         {
+            Debug.Assert(groupId.StartsWith(" ") == false);
+            Debug.Assert(groupId.EndsWith(" ") == false);
+
+            if (this.groupIds.Contains(groupId) == false)
+                throw new Exception($"Group {groupId} has not been defined");
+
             string exampleStr = example == true ? "true" : "false";
 
             this.resources
