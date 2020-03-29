@@ -281,12 +281,12 @@ namespace PreFhir
 
                     ElementTreeNode snapNode;
                     if (item.SnapNode.TryGetElementNode(ed.ElementId, out snapNode) == false)
+                        item.SnapNode.TryGetElementNode(ed.Path, out snapNode);
+                    if (snapNode != null)
                     {
-                        if (item.SnapNode.TryGetElementNode(ed.Path, out snapNode) == false)
-                            throw new Exception($"Internal error. Element {ed.ElementId} not found in snapshot");
+                        ed.Min = snapNode.ElementDefinition.Min;
+                        ed.Max = snapNode.ElementDefinition.Max;
                     }
-                    ed.Min = snapNode.ElementDefinition.Min;
-                    ed.Max = snapNode.ElementDefinition.Max;
                 }
             }
         }
