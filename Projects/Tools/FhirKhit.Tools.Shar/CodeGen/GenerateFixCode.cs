@@ -1,4 +1,5 @@
-﻿using FhirKhit.Tools;
+﻿using Eir.DevTools;
+using FhirKhit.Tools;
 using Hl7.Fhir.Introspection;
 using Hl7.Fhir.Model;
 using System;
@@ -7,7 +8,6 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
-
 
 #if FHIR_R4
 namespace FhirKhit.Tools.R4

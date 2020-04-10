@@ -1,4 +1,5 @@
-﻿using Hl7.Fhir.Model;
+﻿using Eir.DevTools;
+using Hl7.Fhir.Model;
 using Hl7.Fhir.Serialization;
 using Hl7.Fhir.Specification.Source;
 using System;

@@ -9,7 +9,8 @@ using Hl7.Fhir.Model;
 using System.Diagnostics;
 using Hl7.FhirPath;
 using Range = Hl7.Fhir.Model.Range;
-                                                                                                                                            // FhirConstructGeneration.cs:370
+using Eir.DevTools;
+// FhirConstructGeneration.cs:370
 namespace FhirKhit.Tools.R4
 {                                                                                                                                           // FhirConstructGeneration.cs:376
     public static class FhirConstruct                                                                                                       // FhirConstructGeneration.cs:377

@@ -7,6 +7,7 @@ using Hl7.Fhir.Model;
 using Xunit;
 using System.IO;
 using System.Diagnostics;
+using Eir.DevTools;
 
 #if FHIR_R3
 using FhirKhit.Tools.R3;

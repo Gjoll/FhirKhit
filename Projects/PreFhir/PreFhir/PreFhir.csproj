@@ -6,6 +6,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Eir.DevTools" Version="1.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\..\Tools\FhirKhit.Tools.r4\FhirKhit.Tools.R4.csproj" />
     <ProjectReference Include="..\..\Tools\FhirKhit.Tools\FhirKhit.Tools.csproj" />
   </ItemGroup>

@@ -6,6 +6,7 @@ using System.Diagnostics;
 using FhirKhit.Tools;
 using System.Linq;
 using System.Collections;
+using Eir.DevTools;
 
 #if FHIR_R4
 namespace FhirKhit.Tools.R4

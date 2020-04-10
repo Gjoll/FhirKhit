@@ -9,6 +9,7 @@ using System.Xml;
 using Hl7.Fhir.Model;
 using Hl7.Fhir.Serialization;
 using System.Threading;
+using Eir.DevTools;
 
 #if FHIR_R4
 namespace FhirKhit.Tools.R4

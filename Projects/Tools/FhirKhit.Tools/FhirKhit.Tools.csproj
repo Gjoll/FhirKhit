@@ -28,13 +28,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-  </ItemGroup>
-
-  <ItemGroup>
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="CommonMark.NET" Version="0.15.1" />
+    <PackageReference Include="Eir.DevTools" Version="1.7.0" />
     <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.8">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>

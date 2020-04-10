@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Text;
+using Eir.DevTools;
 
 namespace FhirKhit.Tools.R4
 {

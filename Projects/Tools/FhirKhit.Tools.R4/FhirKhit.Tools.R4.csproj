@@ -30,6 +30,7 @@
   
   <ItemGroup>
     <PackageReference Include="CommonMark.NET" Version="0.15.1" />
+    <PackageReference Include="Eir.DevTools" Version="1.7.0" />
     <PackageReference Include="Hl7.Fhir.ElementModel" Version="1.6.0" />
     <PackageReference Include="Hl7.Fhir.R4" Version="1.6.0" />
     <PackageReference Include="Hl7.Fhir.Serialization" Version="1.6.0" />
